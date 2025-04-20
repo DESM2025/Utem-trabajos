@@ -1,0 +1,24 @@
+CREATE USER Usuario_N5 WITH PASSWORD = 'ClaveNueva_3';
+
+#permiso DCL para ver GRANT SELECT ON SCHEMA::dbo TO Usuario_N5;
+
+#permiso DCL crear tabla GRANT CREATE TABLE TO Usuario_N5;
+                         GRANT ALTER ON SCHEMA::dbo TO Usuario_N5;
+                         GRANT INSERT ON dbo.nueva TO Usuario_N5;
+
+
+DML USAR SELECT *FROM Characters;
+
+PARA UN DDL
+CREATE TABLE nueva(
+    ID INT PRIMARY KEY,
+    NC VARCHAR(50)
+);
+
+OTRO DML
+SELECT *FROM nueva;
+INSERT INTO nueva (ID, NC)VALUES (1, 'Diego');
+
+otro DDL
+DROP TABLE dbo.nueva;
+DROP USER Usuario_N5;

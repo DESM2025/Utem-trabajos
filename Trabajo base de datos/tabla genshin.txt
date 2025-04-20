@@ -1,0 +1,45 @@
+create table Artifact_Bonus(
+ID_A INT  primary key,
+ATQ INT not null,
+HP INT not null,
+DEF INT not null,
+EM INT not null
+);
+
+ARREGLAR PARA AÑADIR MAS CARACTERISTICAS
+AL HACE INSERT SE PUEDE AÑLADIR EL ID A LA OTRA TABLA O SI NO SE HACE EL SISTEMA LO HACE AUTOMATICO,
+
+
+
+
+
+create table Artifact_Set(
+ID_AS INT  primary key,
+Name varchar(15)  not null,
+BonusDMG INT not null,
+BonusID INT not null,
+FOREIGN KEY (BonusID) REFERENCES Artifact_Bonus(ID_A)
+);
+
+create table Weapon(
+ID_W INT  primary key,
+ATQ INT not null,
+Type varchar(15)  not null,
+Sub_stat_type varchar(15)  not null,
+Sub_stat INT  not null
+);
+
+create table characters(
+ID_C INT  primary key,
+Name varchar(15)  not null,
+Primary_rol varchar(15)  not null,
+Secundary_rol varchar(15)  not null,
+Default_HP INT not null,
+Default_ATQ INT not null,
+Default_DEF INT not null,
+Default_EM INT not null,
+WeaponID INT,
+ArtifactID INT,
+FOREIGN KEY (ArtifactID) REFERENCES Artifact_Set(ID_AS),
+FOREIGN KEY (WeaponID) REFERENCES Weapon(ID_W)
+);
