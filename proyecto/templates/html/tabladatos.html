@@ -1,0 +1,49 @@
+<!-- templates/html/tabladatos.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla de Datos</title>
+</head>
+<body>
+    <h1>Tabla de Datos</h1>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Poise</th>
+                <th>Physical</th>
+                <th>Magic</th>
+                <th>Fire</th>
+                <th>Lightning</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in data %}
+            <tr>
+                <td>{{ item['_id'] }}</td>
+                <td>{{ item['name'] }}</td>
+                <td>{{ item['position'] }}</td>
+                <td>{{ item['poise'] }}</td>
+                <td>{{ item['physical'] }}</td>
+                <td>{{ item['magic'] }}</td>
+                <td>{{ item['fire'] }}</td>
+                <td>{{ item['lightning'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <br>
+
+    <!-- Agrega un enlace para descargar los datos -->
+    <a href="{{ url_for('descargar_datos') }}" download="data.json">Descargar Datos</a>
+</body>
+</html>
+
+

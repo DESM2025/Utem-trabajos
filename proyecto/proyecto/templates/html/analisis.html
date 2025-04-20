@@ -1,0 +1,21 @@
+<!-- templates/html/analisis.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análisis de Datos</title>
+</head>
+<body>
+    <h1>Análisis de Datos</h1>
+
+    <!-- Gráfico de Tendencia -->
+    <h2>Tendencia del parámetro Physical</h2>
+    <iframe src="{{ url_for('static', filename=graph_tendencia_filename) }}" width="800" height="600"></iframe>
+
+    <!-- Gráfico de Barras - Poise por Nombre -->
+    <h2>Gráfico de Barras - Poise por Nombre</h2>
+    <iframe src="{{ url_for('static', filename=graph_barras_poise_filename) }}" width="800" height="600"></iframe>
+</body>
+</html>
