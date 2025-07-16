@@ -1,0 +1,1 @@
+cambiar las rutas al principio de cada pagina, pues esta la ruta de mi pc
