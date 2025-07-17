@@ -1,3 +1,0 @@
-1.abrir la terminal conda e ir al directorio donde esta el environment.yml
-2.ejecutar conda env create -f environment.yml
-3.activarlo conda activate proyecto
