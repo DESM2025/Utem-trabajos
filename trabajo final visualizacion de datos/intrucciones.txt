@@ -1,3 +1,13 @@
 1.abrir la terminal conda e ir al directorio donde esta el environment.yml
 2.ejecutar conda env create -f environment.yml
 3.activarlo conda activate proyecto
+
+
+Hay que tener en cuenta que el el codigo de cada pagina, el directorio en el que busca el csv de la pagina es el de mi pc, en caso de querer correr este codigo 
+se debe cambiar esa la linea de codigo siguiente,
+
+def load_data():
+    # Ruta del archivo 
+    file_path = r"F:\U\visualizacion\final\myanimelist_top500.csv" 
+
+se debe poner la nueva direccion para las 3 primeras pagina(anime,manga,post)
